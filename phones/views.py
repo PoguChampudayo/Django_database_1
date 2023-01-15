@@ -13,7 +13,8 @@ def show_catalog(request):
     }
     template = 'catalog.html'
     
-    phone = Phone.objects.all().order_by(sorting[request.GET['sort']])
+    phone = Phone.objects.all().order_by(sorting[request.GET.get('sort', 'name')])
+    
     context = {'phones': phone}
     return render(request, template, context)
 
