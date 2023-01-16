@@ -1,2 +1,5 @@
-django
-psycopg2-binary
+Django==4.1.4
+django-binary-database-files==1.0.17
+django_debug_toolbar==3.8.1
+psycopg2==2.9.4
+psycopg2-binary==2.9.4
